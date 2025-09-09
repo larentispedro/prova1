@@ -1,5 +1,5 @@
 :root {
-  --primaria: #003366; /* azul-marinho */
+  --primaria: #003666; /* azul-marinho */
   --secundaria: #D9D9D9; /* cinza-claro */
   --bg-light: #f8f9fa;   /* cinza de fundo */
   --text-dark: #212529;  /* cor do texto principal */
@@ -53,7 +53,6 @@ a:hover {
 
 /* Seção Hero */
 .bg-hero {
-  /* CORREÇÃO: Gradiente e imagem de fundo na mesma declaração */
   /* DICA: Troque 'hero-background.jpg' por uma foto profissional de escritório */
   background-image: linear-gradient(180deg, rgba(0,51,102,0.95), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop');
   background-size: cover;
@@ -86,10 +85,16 @@ a:hover {
 }
 
 /* --- Formulários --- */
-/* CORREÇÃO: Garante que o texto digitado seja visível */
+/* Garante que as ETIQUETAS (Nome, Email) fiquem escuras */
+#contato .form-label {
+    color: var(--text-dark);
+}
+
+/* Garante que o TEXTO DIGITADO fique escuro */
 #contato input,
 #contato textarea {
-  color: var(--text-dark);
+  /* Usamos !important para ter prioridade sobre a classe .text-white da seção */
+  color: var(--text-dark) !important;
 }
 
 /* Estiliza o texto de placeholder (ex: "Digite seu nome") */
@@ -97,6 +102,7 @@ a:hover {
 #contato textarea::placeholder {
   color: #6c757d;
 }
+
 
 /* --- Rodapé --- */
 footer {
