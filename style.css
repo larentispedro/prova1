@@ -120,3 +120,21 @@ footer {
     height: 140px;
   }
 }
+
+/* --- Customização do Carrossel --- */
+#carouselServicos {
+  /* Define uma largura máxima. Altere 900px para o valor que desejar. */
+  max-width: 900px; 
+
+  /* Essas duas linhas centralizam o carrossel na tela */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#carouselServicos .carousel-item img {
+  /* Define uma altura máxima para as imagens */
+  max-height: 450px; /* Ajuste este valor como preferir */
+  
+  /* Garante que a imagem cubra a área sem distorcer, cortando o excesso */
+  object-fit: cover;
+}
